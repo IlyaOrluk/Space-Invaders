@@ -1,7 +1,9 @@
 let left = 0, right = 0, dir = right - left, bullets = [], invaiders = [],
-invGrid = [ 1,1,1,0,1,1,1,1,1,
-            1,1,1,1,1,1,1,1,1,
-            1,1,1,1,1,1,1,1,0]
+invGrid = [ 0,1,1,1,1,1,1,1,0,
+            1,1,1,1,0,1,1,1,1,
+            0,1,1,1,1,1,1,1,0
+
+            ]
    
    class Background {
       constructor(color){
@@ -215,9 +217,7 @@ invGrid = [ 1,1,1,0,1,1,1,1,1,
       let invGridNum = 0;
   for(eachRows = 0; eachRows<3; eachRows++){
     for(eachCols = 0; eachCols<9; eachCols++){
-      if(invGrid[invGridNum]){
-          invaiders.push(new Invaider(100+((70+10)*eachCols),40+(40*eachRows)));
-      }
+          invaiders.push(new Invaider(100+((70+10)*eachCols),40+(40*eachRows)));  
       invGridNum++;
     }
   }  
